@@ -1,0 +1,22 @@
+<div class="container ">
+    <div class="cards animated fadIn" *ngIf="cards">
+        <mat-card class="example-card" *ngFor="let card of cards; let i = index">
+            <mat-card-header class="">
+                <div mat-card-avatar class="example-header-image animated fadIn"></div>
+                <mat-card-title>{{card.title}} </mat-card-title>
+                <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="card.img" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    {{ card.content}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="position-btns">
+                <button mat-button>LIKE</button>
+                <button mat-raised-button color="primary">Ver mas</button>
+            </mat-card-actions>
+        </mat-card>
+        <!-- kk -->
+    </div>
+</div>
