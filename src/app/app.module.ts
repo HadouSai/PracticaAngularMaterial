@@ -9,6 +9,7 @@ import { MaterialModule } from './components/home/material.module';
 import { WorkflowComponent } from './components/workflow/workflow.component';
 import { NavbarComponent } from './components/compartidos/navbar/navbar.component';
 import { MaterialNavbarModule } from './components/compartidos/navbar/material-navbar.module';
+import { TabComponent } from './components/compartidos/tab/tab.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MaterialNavbarModule } from './components/compartidos/navbar/material-n
     AppComponent,
     HomeComponent,
     WorkflowComponent,
-    NavbarComponent
+    NavbarComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,

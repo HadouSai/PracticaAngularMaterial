@@ -1,24 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavbarService } from 'src/app/services/navbar.service';
+import { Subscription } from 'rxjs';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
-  menuHamburger: boolean;
+  menuHamburger = true;
+
+  private sub: Subscription;
   constructor(private navbarS: NavbarService) {
-    this.menuHamburger = navbarS.menuHamburger;
+    this.sub = this.navbarS.cambio.subscribe(c => this.fnHasALgo(c));
   }
 
   ngOnInit() {
+  }
 
+  fnHasALgo(c: boolean) {
+    this.menuHamburger = c;
+    console.log(this.menuHamburger);
   }
-  ngOnChanges() {
-    this.menuHamburger = this.navbarS.menuHamburger;
-    console.log('jijijijijijz2');
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
+
+
 
 }

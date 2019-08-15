@@ -1,0 +1,21 @@
+.tabs {
+    display: flex;
+    align-items: center;
+}
+.container {
+    display: flex;
+    background: #f7f7f7;
+    padding-top: 1rem;
+}
+.tab {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-top-right-radius: 0.65rem;
+    border-top-left-radius: 0.65rem;
+    padding: 0 3rem 0 0.5rem;
+    height: 2rem;
+    align-self: center;
+    background: white;
+}
+

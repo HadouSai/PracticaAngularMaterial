@@ -1,0 +1,16 @@
+<div class="container">
+    <div class=" animated fadeIn">
+        <button mat-button>
+            Tab
+        </button>
+    </div>
+
+    <div class="tabs">
+        <div *ngFor="let tab of misTabs; let i = index" class="">
+            <button mat-button class="tab">
+                    {{tab}}
+            </button>
+        </div>
+    </div>
+
+</div>

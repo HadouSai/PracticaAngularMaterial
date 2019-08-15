@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WorkflowService } from 'src/app/services/workflow.service';
+import { NavbarService } from 'src/app/services/navbar.service';
 
 @Component({
   selector: 'app-workflow',
@@ -9,11 +10,12 @@ import { WorkflowService } from 'src/app/services/workflow.service';
 export class WorkflowComponent implements OnInit {
   cards = [];
   contenido = false;
-  constructor(private workflowS: WorkflowService) { this.cards = this.workflowS.cards; }
+  constructor(private workflowS: WorkflowService,
+              private navbarS: NavbarService) { this.cards = this.workflowS.cards; }
 
   ngOnInit() {
     console.log(this.workflowS.cards);
-
+    this.navbarS.showMenuHamburger(false);
   }
 
   // getData() {
