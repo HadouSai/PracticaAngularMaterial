@@ -10,6 +10,7 @@ export class WorkflowService {
   data = [
     {
       id: '1',
+      componentName: 'cats',
       title: 'Shiba Inu',
       subtitle: 'Dog Breed',
       img: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
@@ -18,6 +19,7 @@ export class WorkflowService {
     {
       id: '2',
       title: 'Kiba',
+      componentName: 'autoservicios',
       subtitle: 'Freshpudel',
       img: 'https://images.dog.ceo/breeds/spaniel-welsh/n02102177_881.jpg ',
       content: 'lorem ipsum a lokare ni jirea kik no de rinkaku etu dex kaku an isox de ni todome butaraio and some'
@@ -25,6 +27,7 @@ export class WorkflowService {
     {
       id: '8',
       title: 'Harune',
+      componentName: 'workflow',
       subtitle: 'England',
       img: 'https://images.dog.ceo/breeds/bulldog-boston/n02096585_1069.jpg',
       content: 'lorem ipsum a lokare ni jirea kik no de rinkaku etu dex kaku an isox de ni todome butaraio and some'
@@ -49,6 +52,8 @@ export class WorkflowService {
     console.log(this.cards);
     return this.cards;
   }
+
+
 
 
 

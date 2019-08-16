@@ -1,15 +1,23 @@
 <div class="container">
-    <div class=" animated fadeIn">
-        <button mat-button>
-            Tab
-        </button>
-    </div>
+
 
     <div class="tabs">
         <div *ngFor="let tab of misTabs; let i = index" class="">
-            <button mat-button class="tab">
-                    {{tab}}
-            </button>
+
+            <div class="nombre-tab tab">
+                <span (click)="stageInTab(tab.component)"  class="title">{{tab?.cardTitle}}</span>
+                <div class="position-close-btn">
+                    <button mat-button class="close-tab" (click)="closeTab(i)">
+                        <span>
+                            <i class="material-icons">
+                                close
+                            </i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+
         </div>
     </div>
 

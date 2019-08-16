@@ -1,11 +1,11 @@
 export interface Card {
     card: {
-        title: string,
-        subtitle: string,
+        title?: string,
+        subtitle?: string,
         img?: string;
-        content: string;
+        content?: string;
         id?: string;
-
+        componentName?: string;
     };
 
 }

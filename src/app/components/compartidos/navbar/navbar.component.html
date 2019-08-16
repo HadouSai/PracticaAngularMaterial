@@ -1,21 +1,26 @@
-<mat-toolbar color="">
+<mat-toolbar class="navbar-container" color="primary">
     <mat-toolbar-row>
         <div class="navbar">
-            <div *ngIf="menuHamburger" class="">
+            <div  class="">
                 <button routerLink="home" mat-button class="btn-search">
                     <i class="material-icons">
                         menu
                     </i>
                 </button>
+                <button mat-button routerLink="modules">
+                    <i class="material-icons">
+                        view_module
+                    </i>
+                </button>
             </div>
             
-            <div *ngIf="!menuHamburger" class="">
+            <!-- <div *ngIf="!menuHamburger" class="">
                 <button routerLink="home" mat-button class="btn-search">
                     <i class="material-icons">
                         arrow_back
                     </i>
                 </button>
-            </div>
+            </div> -->
 
             <div class="navbar-search">
                 <button mat-button class="btn-search">

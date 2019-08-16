@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class TabsService {
 
-  tabs = new Subject<string>();
+  tabs = new Subject<object>();
   constructor() { }
 
 }
